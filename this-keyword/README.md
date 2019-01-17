@@ -1,51 +1,5 @@
 # js-complete-guide
 
-## Budget App
-
-##IIFE
-
-1. The are the functions that invoke automatically.
-
-2. Functions and properties in IIFE are private.
-
-3. To nake the properties or methods public unless you define them in a return key kewyord in the form of object.
-
-4. IIFE returns the properties and methods in an object form.
-
-5. To make the properties and methods public, define a function inside the return function.
-
-6. Anytime you define a function inside an IIFE, to execute the function automatically, you have to call the function inside the same IIFE.
-
-```javascript
-var budgetController = (function() {
-  var x = 23;
-  var add = function(a) {
-    console.log(x + a);
-  };
-  add(90);
-})();
-```
-
-### Making a function public
-
-```javascript
-var budgetController = (function() {
-  var x = 23;
-  var add = function(a) {
-    console.log(x + a);
-  };
-
-  //making the add function a public
-  return {
-    publicTest: function(b) {
-      console.log(add(b));
-    }
-  };
-})();
-```
-
-### if you want to pass one function from one module to other, then you have to pass that module to the module you want access the method
-
 My learning journey of pure javaScript
 
 # this keyword -> 12/01/2019
