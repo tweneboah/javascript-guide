@@ -25,4 +25,4 @@
 // })
 
 const puzzle = getPuzzle();
-console.log(puzzle);
+console.log(puzzle) ;

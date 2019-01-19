@@ -1,8 +1,12 @@
 # js-complete-guide
 
+## bind() method
+
+1. This help us to call a function and set this keyword mannually.
+
 ## Budget App
 
-##IIFE
+## IIFE
 
 1. The are the functions that invoke automatically.
 
