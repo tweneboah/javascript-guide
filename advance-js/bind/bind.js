@@ -13,7 +13,7 @@ var john = {
 };
 
 
-john.presentation('friendly', 'afternoon');
+//john.presentation('friendly', 'afternoon');
 
 
 var Emma = {
@@ -30,7 +30,23 @@ var Emma = {
 
 //The other arguements depends on the function require arguements.
 
-john.presentation.call(Emma, 'friendly', 'afternoon');
+// john.presentation.call(Emma, 'friendly', 'afternoon');
+
+
+
+
+
+const person = {
+    name: "Emmanuel",
+    lastname: "Bella",
+    job: "Teacher",
+    married: false , 
+    boyFriend = function(){
+      console.log(this);
+    } 
+}
+
+console.log(person.boyFriend)
 
 
 
