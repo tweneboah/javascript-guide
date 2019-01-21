@@ -1,6 +1,6 @@
 # js-complete-guide
 
-#Async / Await
+# Async / Await
 
 ```javascript
 //Async Await is used to consume promises
