@@ -25,6 +25,46 @@
 
 //If our promise was fulfilled, we call the resolve callback function and reject if otherwise
 
-  const getIDs = new Promise((resolve, reject) => {
+//The resolve function takes in a callback function which is the function we want to execute
 
+  const getIDs = new Promise((resolve, reject) => {
+     setTimeout(() => {
+        resolve([673,242,786,213,789,200]);
+     },1500);
+ });
+
+//Creating another function that requres data from our getIDs() functions.
+
+//Here our return value will be a promise because, either the getIDs() promise was able to fullfilled or not
+
+const getRecipe = recID => {
+      return new Promise((resolve, reject) => {
+          setTimeout(ID => {
+            const recipe = {
+                publisher: "Emmanuel",
+                title: "Fresh Tomato"};
+                resolve(`${ID}: ${recipe.title}`)
+          },1500, recID);
+        
+      });
+};
+
+ //CONSUMING OUR PROMISE (then() or catch())
+
+ //We pass in a callback function to 'then()' . This returns the results from our resolve function.
+
+ //The number of arguments we pass to then() depends on the results we want to return from the resolve method
+
+
+
+ getIDs
+ .then((IDs) => {
+    console.log(IDs);
+    return getRecipe(IDs[2]);
+ })
+ .then((recipe) => {
+     console.log(recipe);
+ })
+ .catch((err) => {
+     console.log("Error")
  })
