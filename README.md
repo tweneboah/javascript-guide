@@ -1,5 +1,53 @@
 # js-complete-guide
 
+# ES6 map()
+
+1. This is widely use.
+
+2. This create a new array out of the original array to avoid mutating the original array which is useful
+
+3. We all always assign it to a variable and we use return keyword
+
+4. Return keyword is required
+
+5. Multuplying these values
+
+```javascript
+const numbers = [3, 4, 2, 4];
+
+const doubled = numbers.map((number) => {
+  return number * 10;
+});
+
+console.log(numbers);
+console.log(doubled);
+
+//Example 2
+
+//Displaying the prices of all my cars
+
+let cars = [
+  { model: "Toyota", price: 200 },
+  { model: "Nissan", price: 400 },
+  { model: "Honda", price: 400 }
+];
+
+let prices = cars.map((car) => {
+  return car.price;
+});
+
+//Assuming there is a price change of 2%, I can mutate the new generated array
+
+let newPrices = prices.map((price) => {
+  return (price * 2) / 100 + price;
+});
+
+console.log(prices);
+console.log(newPrices);
+```
+
+// ----------------------
+
 # ES6 forEach()
 
 ```javascript
